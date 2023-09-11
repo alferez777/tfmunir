@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>TFM-Unir</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="static/img/favicon.png" rel="icon">
+  <link href="static/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="static/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="static/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="static/lib/animate/animate.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="static/css/style.css" rel="stylesheet">
+  
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+
+</head>
+
+
+<body>
+
+ <!--==========================
+  Header
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="#hero">Home</a></li>
+          <li><a href="#bar">Indicadores Financieros</a></li>
+		  <li><a href="#boxplot">Score Cooperativas</a></li>
+		  <li><a href="#funnel">Cluster Cooperativas</a>  </li>
+		  <li><a href="#timeseries">Time Series</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+  <!--==========================
+    Hero Section
+  ============================-->
+  <section id="hero">
+    <div class="hero-container">
+      <h1> Superintendencia de Economía Popular y Solidaria</h1>
+      <h2>Josue Torres H ♟️, Compañero </h2>
+      <a href="#bar" class="btn-get-started">Dashboard</a>
+    </div>
+  </section><!-- #hero -->
+  
+<main id="main">
+
+    <!--==========================
+      About Us Section
+    ============================-->
+    <section id="bar">
+		<div class="section-header">
+          <h3 class="section-title">Indicadores Financieros  8888</h3>
+        </div>
+			<div class="col-xs-3">
+				<label> Cooperativa de Ahorro y Crédito</label>
+				<select class="form-control" id ='first_cat'>
+				<option value="15 DE ABRIL">15 DE ABRIL</option>
+				<option value="23 DE JULIO">23 DE JULIO</option>
+				<option value="29 DE OCTUBRE">29 DE OCTUBRE</option>
+				<option value="ALIANZA DEL VALLE">ALIANZA DEL VALLE</option>
+				<option value="AMBATO">COOP AMBATO</option>
+				<option value="ANDALUCIA">ANDALUCIA</option>
+				<option value="ATUNTAQUI">ATUNTAQUI</option>
+				<option value="CAMARA DE COMERCIO DE AMBATO">CAMARA DE COMERCIO DE AMBATO</option>
+				<option value="CHIBULEO">CHIBULEO</option>
+				<option value="COOPROGRESO">COOPROGRESO</option>
+				<option value="DE LA PEQUEÑA EMPRESA BIBLIAN">DE LA PEQUEÑA EMPRESA BIBLIAN</option>
+				<option value="DE LA PEQUEÑA EMPRESA DE COTOPAXI">DE LA PEQUEÑA EMPRESA DE COTOPAXI</option>
+				<option value="DE LA PEQUEÑA EMPRESA DE PASTAZA">DE LA PEQUEÑA EMPRESA DE PASTAZA</option>
+				<option value="DE LOS SERVIDORES PUBLICOS DEL MINISTERIO DE EDUCACION Y CULTURA">DE LOS SERVIDORES PUBLICOS DEL MINISTERIO DE EDUCACION Y CULTURA</option>
+				<option value="EL SAGRARIO">EL SAGRARIO</option>
+				<option value="ERCO">ERCO</option>
+				<option value="FERNANDO DAQUILEMA">FERNANDO DAQUILEMA</option>
+				<option value="JARDIN AZUAYO">JARDIN AZUAYO</option>
+				<option value="JUVENTUD ECUATORIANA PROGRESISTA">JUVENTUD ECUATORIANA PROGRESISTA</option>
+				<option value="KULLKI WASI">KULLKI WASI</option>
+				<option value="MUSHUC RUNA">MUSHUC RUNA</option>
+				<option value="ONCE DE JUNIO">11 DE JUNIO</option>
+				<option value="OSCUS">OSCUS</option>
+				<option value="PABLO">PABLO MUÑOZ VEGA</option>
+				<option value="PILAHUIN TIO">PILAHUIN TIO</option>
+				<option value="POLICIA NACIONAL">POLICIA NACIONAL</option>
+				<option value="RIOBAMBA">RIOBAMBA</option>
+				<option value="SAN FRANCISCO">SAN FRANCISCO</option>
+				<option value="SAN JOSE">SAN JOSE</option>
+				<option value="SANTA ROSA">SANTA ROSA</option>
+				<option value="TULCAN">TULCAN</option>
+				<option value="VICENTINA MANUEL ESTEBAN GODOY ORTEGA">VICENTINA MANUEL ESTEBAN GODOY ORTEGA</option>
+				</select>
+			</div>
+					
+		<div class="chart" id="bargraph">
+				<script>
+					var graphs = {{graph | safe}};
+					Plotly.plot('bargraph',graphs,{});
+				</script>
+		</div>
+    </section>
+	
+	<!-- #about -->
+
+    <!--==========================
+      Facts Section
+    ============================-->
+    <!--==========================
+      score score score
+    ============================-->
+
+    <section id="score">
+		<div class="section-header">
+          <h3 class="section-title">Score de Cooperativas</h3>
+        </div>
+		<div class="col-xs-3">
+				<label> Mes</label>
+				<select class="form-control" id ='first_cat2'>
+				<option value="2020-03-31">2020 Marzo</option>
+				<option value="2020-02-29">2020 Febrero</option>
+				<option value="2020-01-31">2020 Enero</option>
+				</select>
+			</div>
+					
+		<div class="chart" id="bargraph2">
+				<script>
+					var graphs2 = {{plot | safe}};
+					Plotly.plot('bargraph2',graphs2,{});
+				</script>
+		</div>
+    </section><!-- #facts -->
+	    <!--==========================
+      END END END score score score
+    ============================-->
+	<!--==========================
+    Call To Action Section
+    ============================-->
+    <section id="call-to-action">
+      <div class="container wow fadeIn">
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-left">
+            <h3 class="cta-title">Clusterización de Entidades Financieras en la SEPS</h3>
+            <p class="cta-text"> La clusterización de las cooperativas del Segmento 1, muestra que varibales son de vital importancia y se traza los centroides de cada cluster </p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="#cluster">Cluster</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- #call-to-action -->
+	
+
+    <!--==========================
+      Services Section
+    ============================-->
+    <section id="cluster">
+		<div class="section-header">
+          <h3 class="section-title">Cartera Vencida</h3>
+        </div>
+		<div class="col-xs-3">
+				<label> Seleccione una cooperativa</label>
+				<select class="form-control" id ='first_cat3'>
+					<option value="15 DE ABRIL">15 DE ABRIL</option>
+					<option value="23 DE JULIO">23 DE JULIO</option>
+					<option value="29 DE OCTUBRE">29 DE OCTUBRE</option>
+					<option value="ALIANZA DEL VALLE">ALIANZA DEL VALLE</option>
+					<option value="AMBATO">COOP AMBATO</option>
+					<option value="ANDALUCIA">ANDALUCIA</option>
+					<option value="ATUNTAQUI">ATUNTAQUI</option>
+					<option value="CAMARA DE COMERCIO DE AMBATO">CAMARA DE COMERCIO DE AMBATO</option>
+					<option value="CHIBULEO">CHIBULEO</option>
+					<option value="COOPROGRESO">COOPROGRESO</option>
+					<option value="DE LA PEQUEÑA EMPRESA BIBLIAN">DE LA PEQUEÑA EMPRESA BIBLIAN</option>
+					<option value="DE LA PEQUEÑA EMPRESA DE COTOPAXI">DE LA PEQUEÑA EMPRESA DE COTOPAXI</option>
+					<option value="DE LA PEQUEÑA EMPRESA DE PASTAZA">DE LA PEQUEÑA EMPRESA DE PASTAZA</option>
+					<option value="DE LOS SERVIDORES PUBLICOS DEL MINISTERIO DE EDUCACION Y CULTURA">DE LOS SERVIDORES PUBLICOS DEL MINISTERIO DE EDUCACION Y CULTURA</option>
+					<option value="EL SAGRARIO">EL SAGRARIO</option>
+					<option value="ERCO">ERCO</option>
+					<option value="FERNANDO DAQUILEMA">FERNANDO DAQUILEMA</option>
+					<option value="JARDIN AZUAYO">JARDIN AZUAYO</option>
+					<option value="JUVENTUD ECUATORIANA PROGRESISTA">JUVENTUD ECUATORIANA PROGRESISTA</option>
+					<option value="KULLKI WASI">KULLKI WASI</option>
+					<option value="MUSHUC RUNA">MUSHUC RUNA</option>
+					<option value="ONCE DE JUNIO">11 DE JUNIO</option>
+					<option value="OSCUS">OSCUS</option>
+					<option value="PABLO">PABLO MUÑOZ VEGA</option>
+					<option value="PILAHUIN TIO">PILAHUIN TIO</option>
+					<option value="POLICIA NACIONAL">POLICIA NACIONAL</option>
+					<option value="RIOBAMBA">RIOBAMBA</option>
+					<option value="SAN FRANCISCO">SAN FRANCISCO</option>
+					<option value="SAN JOSE">SAN JOSE</option>
+					<option value="SANTA ROSA">SANTA ROSA</option>
+					<option value="TULCAN">TULCAN</option>
+					<option value="VICENTINA MANUEL ESTEBAN GODOY ORTEGA">VICENTINA MANUEL ESTEBAN GODOY ORTEGA</option>
+					</select>
+				</div>		
+		<div class="chart" id="bargraph3">
+				<script>
+					var graphs3 = {{dend | safe}};
+					Plotly.plot('bargraph3',graphs3,{});
+				</script>
+		</div>
+    </section><!-- #services -->
+	 <!--==========================
+      Portfolio Section
+    ============================-->
+    <section id="clus5">
+		<div class="section-header">
+          <h3 class="section-title">Variables para la Clusterización</h3>
+        </div>
+			<div class="col-xs-3">
+				<label> Mes </label>
+				<select class="form-control" id ='first_cat5'>
+				<option value="2020-03-31T">2020 Marzo</option>
+				<option value="2020-02-29T">2020 Febrero</option>
+				<option value="2020-01-31T">2020 Enero</option>
+				</select>
+			</div>
+					
+		<div class="chart" id="bargraph5">
+				<script>
+					var graphs5 = {{head | safe}};
+					Plotly.plot('bargraph5',graphs5,{});
+				</script>
+		</div>
+    </section><!-- #portfolio -->
+
+
+
+    <!--==========================
+      Portfolio Section
+    ============================-->
+    <section id="clus">
+		<div class="section-header">
+          <h3 class="section-title">Centroids para la Clusterización 777</h3>
+        </div>
+			<div class="col-xs-3">
+				<label> Mes </label>
+				<select class="form-control" id ='first_cat4'>
+				<option value="2020-03-31">2020 Marzo</option>
+				<option value="2020-02-29">2020 Febrero</option>
+				<option value="2020-01-31">2020 Enero</option>
+				</select>
+			</div>
+					
+		<div class="chart" id="bargraph4">
+				<script>
+					var graphs4 = {{par | safe}};
+					Plotly.plot('bargraph4',graphs4,{});
+				</script>
+		</div>
+    </section><!-- #portfolio -->
+	
+
+	
+	<!--==========================
+    Call To Action Section
+    ============================-->
+    <section id="call-to-action">
+      <div class="container wow fadeIn">
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-left">
+            <h3 class="cta-title">Series de Tiempo de Entidades Financieras en la SEPS</h3>
+            <p class="cta-text"> Las series de tiempo se muestran sobre los indicadores financieros que presentan cada Entidad Financiera en la SEPS </p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="#timeseries">Series de Tiempo</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- #call-to-action -->
+	
+	<!--==========================
+      Team a
+    ============================-->
+    <section id="timeseries">
+		<div class="section-header">
+          <h3 class="section-title">Series de Tiempo</h3>
+        </div>
+			<div class="col-xs-3">
+				<label> Cooperativa </label>
+				<select class="form-control" id ='first_cat9'>
+				<option value="015 DE ABRIL LTDA">15 DE ABRIL</option>
+				<option value="023 DE JULIO LTDA">23 DE JULIO</option>
+				<option value="29 DE OCTUBRE LTDA">29 DE OCTUBRE</option>
+				<option value="ALIANZA DEL VALLE LTDA">ALIANZA DEL VALLE</option>
+				<option value="AMBATO LTDA">COOP AMBATO</option>
+				<option value="ANDALUCIA LTDA">ANDALUCIA</option>
+				<option value="ATUNTAQUI LTDA">ATUNTAQUI</option>
+				<option value="CAMARA DE COMERCIO DE AMBATO LTDA">CAMARA DE COMERCIO DE AMBATO</option>
+				<option value="CHIBULEO LTDA">CHIBULEO</option>
+				<option value="COOPROGRESO LTDA">COOPROGRESO</option>
+				<option value="BIBLIAN">DE LA PEQUEÑA EMPRESA BIBLIAN</option>
+				<option value="DE LA PEQUEÑA EMPRESA DE COTOPAXI LTDA">DE LA PEQUEÑA EMPRESA DE COTOPAXI</option>
+				<option value="DE LA PEQUEÑA EMPRESA DE PASTAZA LTDA">DE LA PEQUEÑA EMPRESA DE PASTAZA</option>
+				<option value="DE LOS SERVIDORES PUBLICOS DEL MINISTERIO DE EDUCACION Y CULTURA LTDA">DE LOS SERVIDORES PUBLICOS DEL MINISTERIO DE EDUCACION Y CULTURA</option>
+				<option value="EL SAGRARIO LTDA">EL SAGRARIO</option>
+				<option value="ERCO LTDA">ERCO</option>
+				<option value="FERNANDO DAQUILEMA LTDA">FERNANDO DAQUILEMA</option>
+				<option value="JARDIN AZUAYO LTDA">JARDIN AZUAYO</option>
+				<option value="JUVENTUD ECUATORIANA PROGRESISTA LTDA">JUVENTUD ECUATORIANA PROGRESISTA</option>
+				<option value="KULLKI WASI LTDA">KULLKI WASI</option>
+				<option value="MUSHUC RUNA LTDA">MUSHUC RUNA</option>
+				<option value="ONCE DE JUNIO LTDA">11 DE JUNIO</option>
+				<option value="OSCUS LTDA">OSCUS</option>
+				<option value="PABLO">PABLO</option>
+				<option value="PILAHUIN TIO LTDA">PILAHUIN TIO</option>
+				<option value="POLICIA NACIONAL LTDA">POLICIA NACIONAL</option>
+				<option value="RIOBAMBA LTDA">RIOBAMBA</option>
+				<option value="SAN FRANCISCO LTDA">SAN FRANCISCO</option>
+				<option value="SAN JOSE LTDA">SAN JOSE</option>
+				<option value="SANTA ROSA LTDA">SANTA ROSA</option>
+				<option value="TULCAN LTDA">TULCAN</option>
+				<option value="VICENTINA MANUEL ESTEBAN GODOY ORTEGA LTDA">VICENTINA MANUEL ESTEBAN GODOY ORTEGA</option>
+				</select>
+			</div>
+					
+		<div class="chart" id="bargraph9">
+				<script>
+					var graphs1 = {{time | safe}};
+					Plotly.plot('bargraph9',graphs1,{});
+				</script>
+		</div>
+    </section><!-- #team a -->
+	
+
+    <!--==========================
+      Contact Section
+    ============================-->
+    <section id="contact">
+      
+    </section><!-- #contact -->
+
+  </main>
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>Universidad Internacional SEK - Master in Data Science</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="static/lib/jquery/jquery.min.js"></script>
+  <script src="static/lib/jquery/jquery-migrate.min.js"></script>
+  <script src="static/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/lib/easing/easing.min.js"></script>
+  <script src="static/lib/wow/wow.min.js"></script>
+  <script src="static/lib/waypoints/waypoints.min.js"></script>
+  <script src="static/lib/counterup/counterup.min.js"></script>
+  <script src="static/lib/superfish/hoverIntent.js"></script>
+  <script src="static/lib/superfish/superfish.min.js"></script>
+
+  <!-- Contact Form JavaScript File -->
+  <script src="static/contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="static/js/main.js"></script>
+  
+  <script src="{{ url_for('static', filename='js/jquery-1.11.1.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/plots.js') }}"></script>
+
+</body>
+</html>
+
