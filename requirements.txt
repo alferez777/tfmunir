@@ -1,3 +1,4 @@
+anyio @ file:///C:/ci/anyio_1644481856696/work/dist
 argon2-cffi @ file:///opt/conda/conda-bld/argon2-cffi_1645000214183/work
 argon2-cffi-bindings @ file:///C:/ci/argon2-cffi-bindings_1644569876605/work
 asttokens @ file:///opt/conda/conda-bld/asttokens_1646925590279/work
@@ -38,7 +39,7 @@ jupyter_server_terminals @ file:///C:/b/abs_ec0dq4b50j/croot/jupyter_server_term
 jupyterlab-pygments @ file:///tmp/build/80754af9/jupyterlab_pygments_1601490720602/work
 kiwisolver==1.4.5
 lxml @ file:///C:/b/abs_c2bg6ck92l/croot/lxml_1679646459966/work
-MarkupSafe == 2.1.1
+MarkupSafe==2.1.1
 matplotlib==3.7.2
 matplotlib-inline @ file:///C:/ci/matplotlib-inline_1661934094726/work
 mistune @ file:///C:/ci_310/mistune_1642084168466/work
